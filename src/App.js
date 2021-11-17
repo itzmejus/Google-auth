@@ -1,11 +1,14 @@
 import react from 'react';
+import {signInWithGoogle} from "./firebase";
 
 function App() {
   return (
 
     <div>
+      
       <body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" styles="background-image:url('https://source.unsplash.com/1L71sPT5XKc');">
         <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+          
           <div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
             <div class="p-4 md:p-12 text-center lg:text-left">
               <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" ></div>
@@ -16,8 +19,9 @@ function App() {
               <p class="pt-8 text-sm">Totally optional short description about yourself, what you do and so on.</p>
 
               <div class="pt-12 pb-8">
-                <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full">
-                  Get In Touch
+                <button class="bg-green-700 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" 
+                onClick={signInWithGoogle}>
+                 Login
                 </button>
               </div>
             </div>
